@@ -167,12 +167,25 @@ However, how the splitting (we call the arguments as the result of splitting `sp
 
 
 \section{Related Work}\label{sec:related}
+In computer science, an ontology is a formal representation of the knowledge about (some aspect of) the world by a set of concepts within a domain and the relationships between those concepts; it introduces vocabulary describing various aspects of the domain being modelled, and provides an explicit specification of the intended meaning of the vocabulary. Description logics (DLs), as fragments of f irst-order logic (FOL), are the logical foundation of OWL.
+Description logics (DLs), as fragments of first-order logic (FOL), are the logical foundation of OWL
 
-\begin{itemize}
-    \item Formal argumentation and ontologies (Descritpion Logic) \cite{ontology}
-    \item Disjunctive frameworks
-\end{itemize}
+    
+\subsection{Formal argumentation and ontologies}
+In \cite{ontology} the authors present an argumentation framework for reasoning and man- agement in (inconsistent or incoherent) description logic ontologies which contain conflicts. First, a new argumentation framework obtained by combining Besnard and Hunter’s framework with binary argumentation is introduced to frame the inner relation over axioms in an ontology. A dialogue mechanism, based on this framework, is then presented to derive meaningful consequences from inconsistent ontologies. Three novel operators are developed to repair those axioms or assertions which cause inconsistency or incoherency of ontologies by using this framework.
 
+\subsection{Disjunctive frameworks}
+The notion of disjunctive attacks was introduced for the first time  in 2009 in \cite{gabbay0}. This works presents joint and disjunctive attacks; formally, $x$ attacks $\{e_1,\dots, e_m\}$ disjunctively means:
+$x = \mathit{in}$ implies $\bigwedge^m_{i=1} e_i = \mathit{out}$ 
+(especially this can mean that if $x$ is in then several or more $e_i$ are out). If $x$ is labelled in and $e_j, j = 1, \dots,k$ are the nodes being disjunctively attacked from $x$ then at least one of $e_j$ must be out.
+
+In \cite{gabbay1} the authors discusses properties of what is called argumentation systems with disjunctive attacks, where we have an argument $x$ attacking
+a set of arguments $H$, without specifically attacking any specific $y \in H$: in other words, $x$ attacks the conjunction $\bigvee_{y \in H} y$. In this paper, the representation theorem turns the concept of disjunctive attacks into meta-level concept
+
+
+Combined attacks has been  considered in \cite{parsons06}. There,  the authors generalise Dung's approach to allow it to handle sets of attacking arguments. However, the aim is to let the framework be capable of dealing with \emph{synergies} among arguments in \emph{and}, thus \emph{without} considering numerical strengths, something that is at the core of this work instead. For instance, ``$a_1$: \emph{Joe does not like Jack}'', and ``$a_2$: \emph{There is a nail in Jack's antique coffee table}'' do not attack separately ``$a_3$: \emph{Joe did not hammer a nail into Jack's antique coffee table}'', but they do it only in conjunction (example taken from \cite{parsons06}).
+
+A weighted defence based on  combined attacks in \cite{parsons06} was presented in \cite{wcombined}, with the main goal to study well-founded frameworks by using such a new notion of defence. 
 
 
 \section{Background}\label{sec:bg}
